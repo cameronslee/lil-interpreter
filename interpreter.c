@@ -11,19 +11,11 @@
 #define MAX_BUFF_SIZE 10000
 #define KEYWORDS 22 // number of keywords, used for reserved word lookup
 
-#define INITIAL_ROOT_CAPACITY 50 // initial capacity for nodes in translation unit
-
-bool had_error = false;
-bool lexer_at_end = false;
-
 /* ============================== ERROR HANDLING ===============================
  *
  * ===========================================================================*/
 void error(int line, char *msg) {
   printf("line %d | error: %s\n", line, msg);
-
-  // TODO Halt Parser, enter panic mode
-  had_error = true;
 }
 
 /* ============================== HELPERS ======================================
